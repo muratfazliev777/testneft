@@ -17,9 +17,6 @@
 }
 
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
 #preloader {
   position: fixed;
   top: 0;
@@ -29,31 +26,29 @@
   z-index: 9999;
   overflow: hidden;
   background: #151515;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 0px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffc451;
-  border-top-color: #151515;
-  border-bottom-color: #151515;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
+#preloader-logo {
+  width: 100%; /* Ширина логотипа равна 100% экрана */
+  max-width: 300px; /* Максимальная ширина логотипа (по вашему выбору) */
+  height: auto; /* Высота автоматически рассчитывается, чтобы сохранить соотношение сторон */
+  animation: animate-preloader 0.3s ease-in-out infinite alternate; /* Увеличьте скорость и сделайте анимацию плавнее */
 }
 
 @keyframes animate-preloader {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: scale(1.2);
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # General
