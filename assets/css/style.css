@@ -1076,6 +1076,7 @@ section {
 }
 
 .features .tab-pane p:last-child {
+  font-size: 18px;
   margin-bottom: 0;
 }
 
